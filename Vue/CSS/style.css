@@ -1,0 +1,41 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map{
+    height: 700px;
+    width: 700px;
+}
+
+.div_form{
+    width: 100%;
+    background-color: gray;
+}
+
+.input_form{
+    width: 80%;
+    padding: 10px 25px;
+    margin: 5px ;
+}
+
+.bt_sub{
+    width: 20%;
+    background: whitesmoke;
+}
+
+
+.bt-mt{
+    width: 25%;
+}
+
+.div_bt_mt{
+    width: 80%;
+    background-color: black;
+}
+
+#direction2{
+    height: 450px;
+    overflow: auto;
+}

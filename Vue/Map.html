@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+  <title>Gps API google map</title>
+  <link rel="stylesheet" href='style.css'>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTcVGnVeUmBWxifCThnkq_X91rwS03Ngk&libraries=places,routes&callback"
+  ></script>
+</head>
+<body onload="initialize()">
+<div class="w-full grid grid-cols-2 gap-2 ">
+  <div id="map">
+
+  </div>
+  <div class="flex flex-col bg-black">
+    <div class="flex justify-center items-center bg-white">
+      <div class="div_form flex flex-col justify-center items-center rounded-lg">
+        <input class="input_form rounded-lg" type="text" id="address" name="address" autocomplete="address" required />
+        <input class="input_form rounded-lg" type="text" id="address2" name="address2" autocomplete="address2" required />
+        <div class="flex justify-center flex-row items-center mb-8 bg-white div_bt_mt">
+          <button value="0" id="voiture" type="button" class="border-4 bt-mt">Voiture</button>
+          <button value="0" id="velo" type="button" class="border-4 bt-mt">Vélo</button>
+          <button value="0" id="train" type="button" class="border-4 bt-mt">Train</button>
+          <button value="0" id="pied" type="button" class="border-4 bt-mt">Pied</button>
+        </div>
+        <div class="flex justify-center flex-row items-center mb-8 bg-white div_bt_mt">
+          <label>Payage</label>
+          <input id="payage" type="checkbox" class="border-4 bt-mt">
+          <label>Ferries</label>
+          <input id="ferries" type="checkbox" class="border-4 bt-mt">
+          <label>Autoroute</label>
+          <input id="autoroute" type="checkbox" class="border-4 bt-mt">
+        </div>
+        <button id="submit" class="bt_sub rounded-full" type="submit">Rechercher</button>
+      </div>
+    </div>
+    <div id="renseign" class="renseign bg-white">
+      <h1 id="rend"></h1>
+    </div>
+    <div id="direction2">
+      <div id="direction" class="flex justify-center items-center flex-col bg-white">
+
+      </div>
+    </div>
+  </div>
+</div>
+<script defer src="script.js"></script>
+</body>
+</html>
